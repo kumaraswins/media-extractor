@@ -1,0 +1,30 @@
+<div ng-controller="MusicController">
+    <div class ="container">
+    <!--<form id="video">
+        <div class="form-group">
+          https://www.youtube.com/watch?v=4SDRrctDkvk
+            <input type="text" class="form-control" name="url" placeholder="Youtube URL" required="true" autofocus="" ng-model="video.url" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="url" placeholder="Name" required="true" autofocus="" ng-model="video.name" />
+        </div>
+
+         <button type="submit" class="btn btn-primary"  ng-click="downloadVideo()">Download Video</button>
+      </form>-->
+			</div>
+          <div class ="container" ng-init = "downloaded = false">
+          <h4>Convert Youtube </h4>
+		    <form id="mp3">
+        
+        <div class="form-group">
+            <input type="text" class="form-control"  name="url" placeholder="Youtube URL" required ="true"  autofocus="" ng-model="music.url" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" required ="true" name="url" placeholder="Name"  ng-model="music.name" />
+        </div>
+
+         <button type="submit" class="btn btn-primary"  ng-click="downloadMp3()" ng-disabled="downloaded || music.url == '' || music.name==''">Download Mp3</button>
+      </form>
+			</div>
+</div>
