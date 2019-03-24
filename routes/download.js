@@ -2,10 +2,22 @@ var express = require('express');
 var router = express.Router();
 var downloader = require('../utilities/downloader');
 var bodyParser = require('body-parser');
-var downloadFolder = process.cwd() + "/downloads/";
+var parentDir =  process.cwd()
+var downloadFolder = parentDir + "/downloads/";
 var videoFolder = downloadFolder +"videos/";
 var mp3Folder = downloadFolder+"music/";
 var fs = require('fs');
+
+if (!fs.existsSync(downloadFolder)){
+    fs.mkdirSync(downloadFolder);
+}
+
+if (!fs.existsSync(videoFolder)){
+    fs.mkdirSync(videoFolder);
+}
+if (!fs.existsSync(mp3Folder)){
+    fs.mkdirSync(mp3Folder);
+}
 
 router.use(bodyParser.json());
 
