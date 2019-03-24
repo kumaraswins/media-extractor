@@ -59,6 +59,6 @@ typings/
 
 # next.js build output
 .next
-.mp3
-.mp4
+/downloads/**/*.mp3
+/downloads/**/*.mp4
 .DS_Store
